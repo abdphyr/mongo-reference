@@ -4,12 +4,12 @@ connect('mongodb://localhost/practice')
         console.log("Mongo db ga ulanish hosil qilindi ")
     })
 
-interface IAuthor extends Document {
+interface IAuthor extends Document<ObjectId> {
     firstName: string;
     lastName: string;
     email: string;
 }
-interface IBook extends Document {
+interface IBook extends Document<ObjectId> {
     title: string;
     author: string
 }
